@@ -15,7 +15,7 @@ public class ServerTCP {
 			Socket socket = serverSocket.accept();
             PrintWriter writer = new PrintWriter(socket.getOutputStream());
             writer.println(sdf.format(System.currentTimeMillis()));
-            writer.flush();
+            writer.flush();//limpia el buffer
 		}
 	}
 }
